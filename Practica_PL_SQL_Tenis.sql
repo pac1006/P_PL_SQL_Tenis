@@ -84,6 +84,7 @@ BEGIN
     IF vPistasLibres%NOTFOUND
     THEN
         CLOSE vPistasLibres;
+	rollback;
         RETURN 0;
     END IF;
 
